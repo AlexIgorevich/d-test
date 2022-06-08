@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'CircularStd-Book';
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url('/wp-content/themes/dizzain-test/dist/fonts/CircularStd-Book.otf'),
+  url('/wp-content/themes/dizzain-test/dist/fonts/CircularStd-Book.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'CircularStd-Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/wp-content/themes/dizzain-test/dist/fonts/CircularStd-Medium.otf'),
+  url('/wp-content/themes/dizzain-test/dist/fonts/CircularStd-Medium.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'CircularStd-Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/wp-content/themes/dizzain-test/dist/fonts/CircularStd-Bold.otf'),
+  url('/wp-content/themes/dizzain-test/dist/fonts/CircularStd-Bold.ttf')  format('truetype');
+}

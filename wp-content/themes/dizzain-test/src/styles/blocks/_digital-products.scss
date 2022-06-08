@@ -1,0 +1,174 @@
+.products-block {
+  background-color: #000000;
+  color: #ffffff;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 130px;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+      text-align: center;
+      margin-bottom: 84px;
+    }
+  }
+
+  &__items {
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__left {
+    display: none;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: $ff-medium;
+      font-size: 48px;
+      line-height: 80px;
+
+      li {
+        color: #000000;
+        transition: all .1s ease-in-out;
+        cursor: pointer;
+
+        &:not(.active) {
+          text-shadow: #b7b7b7 1px 1px 0, #b7b7b7 -1px -1px 0, #b7b7b7 1px -1px 0, #b7b7b7 -1px 1px 0, #b7b7b7 1px 1px 0;
+        }
+
+        &.active {
+          color: #ffffff;
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      flex: 0 0 50%;
+    }
+  }
+
+  &__right {
+    @media screen and (min-width: 768px) {
+      flex: 0 0 50%;
+      padding-top: 24px;
+    }
+  }
+
+  &__right-title {
+    font-family: $ff-medium;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+
+  &__right-content {
+    height: 0;
+    overflow: hidden;
+    transition: all .1s ease-in-out;
+    opacity: 0;
+  }
+
+  &__right-item {
+    ul, p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 34px;
+      @media screen and (min-width: 768px) {
+        font-size: 26px;
+        line-height: 46px;
+      }
+    }
+
+    ul {
+      padding-left: 14px;
+      list-style: none;
+      @media screen and (min-width: 768px) {
+        padding-left: 26px;
+      }
+
+      li {
+        position: relative;
+        margin-bottom: 5px;
+        @media screen and (min-width: 768px) {
+          margin-bottom: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: -14px;
+          top: 15px;
+          background-color: #ABABAB;
+          width: 4px;
+          height: 4px;
+          border-radius: 2px;
+          @media screen and (min-width: 768px) {
+            left: -26px;
+            top: 20px;
+          }
+        }
+      }
+    }
+
+    .accordion-trigger {
+      cursor: pointer;
+
+      span {
+        position: relative;
+
+        &:after {
+          content: '';
+          background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.9199 0.796875L12.3633 0.210938C12.2168 0.0644531 11.9824 0.0644531 11.8652 0.210938L6.5625 5.51367L1.23047 0.210938C1.11328 0.0644531 0.878906 0.0644531 0.732422 0.210938L0.175781 0.796875C0.0292969 0.914062 0.0292969 1.14844 0.175781 1.29492L6.29883 7.41797C6.44531 7.56445 6.65039 7.56445 6.79688 7.41797L12.9199 1.29492C13.0664 1.14844 13.0664 0.914062 12.9199 0.796875Z' fill='%234D4D4D'/%3E%3C/svg%3E%0A");
+          background-position: center;
+          background-repeat: no-repeat;
+          position: absolute;
+          right: -27px;
+          top: 50%;
+          margin-top: -5px;
+          width: 14px;
+          height: 14px;
+          transition: all .1s ease-in-out;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    &:not(.active) {
+      color: #4D4D4D;
+    }
+
+    &.active {
+      .products-block__right-content {
+        height: auto;
+        padding: 13px 0 32px;
+        overflow: visible;
+        opacity: 1;
+        @media screen and (min-width: 768px) {
+          padding: 0;
+        }
+      }
+
+      .accordion-trigger {
+        span {
+          &:after {
+            background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.9199 0.796875L12.3633 0.210938C12.2168 0.0644531 11.9824 0.0644531 11.8652 0.210938L6.5625 5.51367L1.23047 0.210938C1.11328 0.0644531 0.878906 0.0644531 0.732422 0.210938L0.175781 0.796875C0.0292969 0.914062 0.0292969 1.14844 0.175781 1.29492L6.29883 7.41797C6.44531 7.56445 6.65039 7.56445 6.79688 7.41797L12.9199 1.29492C13.0664 1.14844 13.0664 0.914062 12.9199 0.796875Z' fill='white'/%3E%3C/svg%3E%0A");
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}

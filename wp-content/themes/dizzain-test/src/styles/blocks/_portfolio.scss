@@ -1,0 +1,123 @@
+.portfolio-block {
+  padding-bottom: 80px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 70px;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    @media screen and (min-width: 768px) {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 28px;
+    color: #4D4D4D;
+    @media screen and (min-width: 768px) {
+      text-align: center;
+      font-size: 21px;
+      line-height: 32px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 30px;
+      max-width: 770px;
+      @media screen and (min-width: 768px) {
+        margin: 0 auto 60px;
+      }
+    }
+  }
+
+  &__slider-wrap {
+    position: relative;
+  }
+
+  &__slider {
+    overflow: hidden;
+    margin-right: -20px;
+    padding-right: 20px;
+    @media screen and (min-width: 768px) {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__slider-pagination.swiper-pagination-bullets {
+    text-align: center;
+    padding-top: 32px;
+
+    @media screen and (max-width: 560px) {
+      display: flex;
+    }
+
+    .swiper-pagination-bullet {
+      margin: 0 !important;
+      border-radius: 0;
+      height: 1px;
+      background: #E0E0E0;
+      width: 50px;
+
+      &.swiper-pagination-bullet-active {
+        height: 2px;
+        background: #000000;
+        transform: translateY(1px);
+      }
+    }
+  }
+
+  &__slider-button {
+    position: absolute;
+    display: none;
+    width: 37px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg width='37' height='22' viewBox='0 0 37 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26.1172 4.59124e-06L24.561 1.5323L32.8098 9.9L-0.000490003 9.9L-0.000490386 12.1L32.8098 12.1L24.561 20.4303L26.1172 22L36.9995 11L26.1172 4.59124e-06Z' fill='%23333333'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -54px;
+
+    @media screen and (min-width: 1300px) {
+      display: block;
+    }
+
+    &.swiper-button-disabled {
+      opacity: .5;
+    }
+  }
+
+  &__slider-button-prev {
+    left: -68px;
+    transform: rotate(180deg);
+  }
+
+  &__slider-button-next {
+    right: -68px;
+  }
+
+  &__slide-title {
+    font-family: $ff-medium;
+    font-size: 21px;
+    line-height: 27px;
+    color: #101010;
+    padding-top: 10px;
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+      line-height: 30px;
+      padding-top: 20px;
+    }
+  }
+
+  &__slide-image {
+    max-height: 350px;
+    overflow: hidden;
+    @media screen and (min-width: 768px) {
+      max-height: 400px;
+    }
+  }
+}

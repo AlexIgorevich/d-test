@@ -1,0 +1,35 @@
+{
+  "name": "dizzain-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "laravel-mix": "^6.0.43",
+    "laravel-mix-polyfill": "^3.0.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.1.0"
+  },
+  "browserslist": [
+    "last 6 versions"
+  ],
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "babel-polyfill": "^6.26.0",
+    "jquery": "^3.6.0",
+    "swiper": "^8.0.7",
+    "targets-webpack-plugin": "^4.0.0"
+  }
+}
